@@ -45,18 +45,22 @@
                 Cookie
                 <!--product name above-->
               </div>
-              <div class = "prodquantity">
+              <div class = "prodquantity">Size desired
                 <div style="line-height:55%;">
-    <br>
-</div><div style="line-height:55%;">
-    <br>
+   <br>
 </div>
 
-                
+<select name = "size" id = "size">
+ <option value = "1">  10g-</option>
+<option value = "1.5">  15g-</option>
+<option value = "2">  20g-</option>
+<!--different sizes above-->
+                 
+</select>
                 <div class = "price"><div style="line-height:75%;">
     <br>
 </div>
-                  0,99$<span class = "perqty">/each</span>
+<div id = "prices" data-value = "0.99">    0,99$</div>
                   
                   <!--price above-->
                 </div>
@@ -67,7 +71,8 @@
                 <!--description above-->
                 <label for="desc"></label>
                 <br>
-  <input type="button" class = "button" id="desc" name="desc" value = "Ultimate Chocolate Chip Cookie!">
+  <input type="button" class = "button" id="desc" name="desc" value = "More descrpiption">
+  <a id = "moredesc" style = "display:none; position:absolute;"> Ultimate Chocolate Chip Cookie!</a>
                  <div style="line-height:75%;">
     <br>
                 </div>  
@@ -82,7 +87,7 @@
             <tr>
               <td class = "quantitydesired">Quantity desired
                 <label for="qty"></label>
-                <input class="quantity" id="qty" min="1" max = "12" name="qty" value="1" type="number">
+                <input class="quantity" id="qty" min="1" max = "8" name="qty" value="1" type="number">
                   <!--change max above-->
                 <div class = "stock">8 in stock;</div>
                 <!--quantity in stock above-->
@@ -127,7 +132,7 @@
     
  </footer>
   
-  
+ <script src="../Javascript/ProductPageJS.js"></script> 
    </body>
    
    

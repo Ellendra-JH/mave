@@ -44,28 +44,39 @@
                 Banana
                 <!--product name above-->
               </div>
-              <div class = "prodquantity">
-                <div style="line-height:55%;">
-    <br>
-</div><div style="line-height:55%;">
+              <div class = "prodquantity">Size desired
+                 <div style="line-height:55%;">
     <br>
 </div>
+
+<select name = "size" id = "size">
+  <option value = "1">  50g-</option>
+ <option value = "2">  100g-</option>
+ <option value = "3">  150g-</option>
+<!--different sizes above-->
+                  
+</select>
+<div style="line-height:55%;">
+    <br>
+</div>
+
                 
                 <div class = "price"><div style="line-height:75%;">
     <br>
 </div>
-                  0,62$<span class = "perqty">/each</span>
+              <div id = "prices" data-value = "0.62">0.62$</div>
                   
                   <!--price above-->
                 </div>
                <div style="line-height:45%;">
     <br>
 </div>
-                Organic Banana (190g avg.)
+                Organic Banana 
                 <!--description above-->
                 <label for="desc"></label>
                 <br>
-  <input type="button" class = "button" id="desc" name="desc" value = "Sweet and fiber-rich banana!">
+  <input type="button" class = "button" id="desc" name="desc" value = "More description">
+  <a id = "moredesc" style = "display:none; position:absolute;"> Sweet and fiber-rich banana!</a>
                  <div style="line-height:75%;">
     <br>
                 </div>  
@@ -80,7 +91,7 @@
             <tr>
               <td class = "quantitydesired">Quantity desired
                 <label for="qty"></label>
-                <input class="quantity" id="qty" min="1" max = "12" name="qty" value="1" type="number">
+                <input class="quantity" id="qty" min="1" max = "32" name="qty" value="1" type="number">
                   <!--change max above-->
                 <div class = "stock">32 in stock;</div>
                 <!--quantity in stock above-->
@@ -125,7 +136,7 @@
    
 </footer>
   
-  
+<script src="../Javascript/ProductPageJS.js"></script> 
    </body>
    
    

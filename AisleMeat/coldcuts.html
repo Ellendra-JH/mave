@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
    <head>
+    
 	<link rel="stylesheet" href="../css/products.css">
 	  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://kit.fontawesome.com/445988e632.js" crossorigin="anonymous"></script> 
-         <title> Mave | Product name</title>
+    
+         <title> Mave | Cold cuts</title>
     <!--change product name above-->
    </head>
    
@@ -48,9 +50,9 @@
     <br>
 </div>
                 <select name = "size" id = "size">
-    <option value = "50">  10 slices-</option>
-   <option value = "75">  50 slices-</option>
-   <option value = "100">  100 slices-</option>
+    <option value = "1">  10 slices-</option>
+   <option value = "5">  50 slices-</option>
+   <option value = "10">  100 slices-</option>
   <!--different sizes above-->
                     
   </select>
@@ -61,8 +63,8 @@
 </div>
                 <select name = "type" id = "typ">
     <option value = "tradit"> Ham  </option>
-   <option value = "bnlss">  Salami (+0.50$)</option>
-   <option value = "bnlssPRM">  Smoked turkey(+0.99$)</option>
+   <option value = "bnlss">  Salami </option>
+   <option value = "bnlssPRM">  Smoked turkey</option>
   <!--different types abovee-->
                     
   </select>
@@ -70,7 +72,7 @@
                 <div class = "price"><div style="line-height:75%;">
     <br>
 </div>
-                  5,99$<span class = "perqty">/10 slices</span>
+                  <div id = "prices" data-value = "5.99">   5.99$</div><span class = "perqty"></span> 
                   
                   <!--price above-->
                 </div>
@@ -82,6 +84,7 @@
                 <label for="desc"></label>
                 <br>
   <input type="button" class = "button" id="desc" name="desc" value = "More description">
+                <a id = "moredesc" style = "display:none; position:absolute;"> These cuts are the best </a>
                  <div style="line-height:75%;">
     <br>
                 </div>  
@@ -141,7 +144,7 @@
    
 </footer>
   
-  
+<script src="../Javascript/ProductPageJS.js"></script> 
    </body>
    
    

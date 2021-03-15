@@ -37,9 +37,9 @@
 							Size
 							<div style="line-height:55%;"><br></div>
 							<select name = "size" id = "size">
-								<option value = "small">50g</option>
-								<option value = "medium">100g</option>
-								<option value = "large">150g</option>		
+								<option value = "1">50g</option>
+								<option value = "2">100g</option>
+								<option value = "3">150g</option>		
 							</select>
 							<div style="line-height:55%;"><br>
 							</div>
@@ -48,13 +48,13 @@
 							<div style="line-height:55%;"><br></div>
 							<select name = "type" id = "typ">
 								<option value = "wbroccoli"> Whole broccoli  </option>
-							   <option value = "cbroccoli">  Chopped broccoli (+1.00$)</option>	
+							   <option value = "cbroccoli">  Chopped broccoli </option>	
 							</select>
 							
 							<!--product price -->				
 							<div class = "price">
 								<div style="line-height:75%;"><br></div>
-								4.50$
+								<div id = "prices" data-value = "4.50">4.50$</div>
 							</div>
 							
 							<!--product description-->
@@ -63,6 +63,7 @@
 								<label for="desc"></label>
 								<br>
 								<input type="button" class = "button" id="desc" name="desc" value = "More description">
+								<a id = "moredesc" style = "display:none; position:absolute;"> Nutrient-filled certified Broccolis!</a>
 							<div style="line-height:75%;"><br></div>  
 						</div>
 					</td>
@@ -74,7 +75,7 @@
 							<td class = "quantitydesired">
 								Quantity desired
 								<label for="qty"></label>
-								<input class="quantity" id="qty" min="1" max = "10" name="qty" value="1" type="number">
+								<input class="quantity" id="qty" min="1" max = "30" name="qty" value="1" type="number">
 								 
 								<!--quantity in stock-->
 								<div class = "stock">30 in stock;</div>
@@ -109,5 +110,6 @@
 			</div>
 		   <p class="copyright">MAVE GROCERIES © 2021</p>
 		</footer>
+		<script src="../Javascript/ProductPageJS.js"></script> 
 	</body>
 </html>

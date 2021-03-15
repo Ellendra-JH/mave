@@ -45,10 +45,18 @@
                 White Bread
                 <!--product name above-->
               </div>
-              <div class = "prodquantity">
+              <div class = "prodquantity">Size desired
                 <div style="line-height:55%;">
-    <br>
-</div><div style="line-height:55%;">
+   <br>
+</div>
+
+<select name = "size" id = "size">
+ <option value = "1">  50g-</option>
+<option value = "2">  100g-</option>
+<option value = "3">  150g-</option>
+<!--different sizes above-->
+                 
+</select><div style="line-height:55%;">
     <br>
 </div>
 
@@ -56,7 +64,7 @@
                 <div class = "price"><div style="line-height:75%;">
     <br>
 </div>
-                  4,99$<span class = "perqty">/pack</span>
+               <div id = "prices" data-value ="4.99">   4,99$ </div>
                   
                   <!--price above-->
                 </div>
@@ -67,7 +75,8 @@
                 <!--description above-->
                 <label for="desc"></label>
                 <br>
-  <input type="button" class = "button" id="desc" name="desc" value = "Traditional White Bread!">
+  <input type="button" class = "button" id="desc" name="desc" value = "More description">
+  <a id = "moredesc" style = "display:none; position:absolute;"> Traditional white bread!</a>
                  <div style="line-height:75%;">
     <br>
                 </div>  
@@ -82,7 +91,7 @@
             <tr>
               <td class = "quantitydesired">Quantity desired
                 <label for="qty"></label>
-                <input class="quantity" id="qty" min="1" max = "12" name="qty" value="1" type="number">
+                <input class="quantity" id="qty" min="1" max = "8" name="qty" value="1" type="number">
                   <!--change max above-->
                 <div class = "stock">8 in stock;</div>
                 <!--quantity in stock above-->
@@ -127,7 +136,7 @@
     
  </footer>
   
-  
+ <script src="../Javascript/ProductPageJS.js"></script> 
    </body>
    
    

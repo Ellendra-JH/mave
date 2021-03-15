@@ -44,7 +44,11 @@
                Fabreeze (Bora Bora Edition)
                 <!--product name above-->
               </div>
-              <div class = "prodquantity">Price
+              <div class = "prodquantity"><select name = "size" id = "size">
+                <option value = "1">  1 can-</option>
+               <option value = "2">  2 cans-</option>
+               <option value = "3">  3 cans-</option>
+              </select>
                 <div style="line-height:55%;">
     <br>
 </div>
@@ -53,7 +57,7 @@
     <br>             
                 <div class = "price"><div style="line-height:75%;">
 </div>
-                  3.99$<span class = "perqty"></span>
+            <div id = "prices" data-value = "3.99">    3.99$</div><span class = "perqty"></span>
                   
                   <!--price above-->
                 </div>
@@ -65,6 +69,7 @@
                 <label for="desc"></label>
                 <br>
   <input type="button" class = "button" id="desc" name="desc" value = "More description">
+  <a id = "moredesc" style = "display:none; position:absolute;"> Best products</a>
                  <div style="line-height:75%;">
     <br>
                 </div>  
@@ -124,7 +129,7 @@
    
 </footer>
   
-  
+<script src="../Javascript/ProductPageJS.js"></script> 
    </body>
   
 </html>

@@ -37,9 +37,9 @@
 							Size
 							<div style="line-height:55%;"><br></div>
 							<select name = "size" id = "size">
-								<option value = "small">small</option>
-								<option value = "medium">medium</option>
-								<option value = "large">large</option>		
+								<option value = "1">small</option>
+								<option value = "1.5">medium</option>
+								<option value = "2">large</option>		
 							</select>
 							<div style="line-height:55%;"><br>
 							</div>
@@ -48,14 +48,14 @@
 							<div style="line-height:55%;"><br></div>
 							<select name = "type" id = "typ">
 								<option value = "wcarrots"> Whole carrots  </option>
-							   <option value = "bcarrots">  Baby carrots (-1.50$)</option>
-							   <option value = "scarrots">  Shreded carrots (-1.00$)</option>		
+							   <option value = "bcarrots">  Baby carrots </option>
+							   <option value = "scarrots">  Shreded carrots </option>		
 							</select>
 							
 							<!--product price -->				
 							<div class = "price">
 								<div style="line-height:75%;"><br></div>
-								3.97$
+								<div id = "prices" data-value = "3.97">3.97$</div>
 							</div>
 							
 							<!--product description-->
@@ -64,6 +64,7 @@
 								<label for="desc"></label>
 								<br>
 								<input type="button" class = "button" id="desc" name="desc" value = "More description">
+								<a id = "moredesc" style = "display:none; position:absolute;"> Naturally grown organic carrots</a>
 							<div style="line-height:75%;"><br></div>  
 						</div>
 					</td>
@@ -75,7 +76,7 @@
 							<td class = "quantitydesired">
 								Quantity desired
 								<label for="qty"></label>
-								<input class="quantity" id="qty" min="1" max = "10" name="qty" value="1" type="number">
+								<input class="quantity" id="qty" min="1" max = "25" name="qty" value="1" type="number">
 								 
 								<!--quantity in stock-->
 								<div class = "stock">25 in stock;</div>
@@ -110,5 +111,6 @@
 			</div>
 		   <p class="copyright">MAVE GROCERIES © 2021</p>
 		</footer>
+		<script src="../Javascript/ProductPageJS.js"></script> 
 	</body>
 </html>

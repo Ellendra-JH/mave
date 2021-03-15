@@ -39,9 +39,9 @@
 							Size
 							<div style="line-height:55%;"><br></div>
 							<select name = "size" id = "size">
-								<option value = "small">Small</option>
-								<option value = "medium">Medium</option>
-								<option value = "large">Large</option>		
+								<option value = "1">Small</option>
+								<option value = "2">Medium</option>
+								<option value = "3">Large</option>		
 							</select>
 							<div style="line-height:55%;"><br>
 							</div>
@@ -50,7 +50,7 @@
 							<div style="line-height:55%;"><br></div>
 							<select name = "type" id = "typ">
 								<option value = "extra-sc"> Extra sauce  </option>
-							   <option value = "no-sc">  No Sauce (+1.50$)</option>
+							   <option value = "no-sc">  No Sauce </option>
 							   
 									
 							</select>
@@ -58,7 +58,7 @@
 							<!--product price -->				
 							<div class = "price">
 								<div style="line-height:75%;"><br></div>
-								4.99$
+								<div id = "prices" data-value = "4.99"> 4.99$ </div>
 							</div>
 							
 							<!--product description-->
@@ -66,7 +66,8 @@
 								<h3>a Thai dish of sliced sour fruits and vegetables.</h3>
 								<label for="desc"></label>
 								
-								<input type="button" class = "button"  value = "More Description">
+								<input type="button" class = "button" id="desc"  value = "More description">
+								<a id = "moredesc" style = "display:none; position:absolute;"> Our most popular cooked dish</a>
 							<div style="line-height:75%;"><br></div>  
 						</div>
 					</td>
@@ -113,5 +114,6 @@
 			</div>
 		   <p class="copyright">MAVE GROCERIES © 2021</p>
 		</footer>
+		<script src="../Javascript/ProductPageJS.js"></script> 
 	</body>
 </html>

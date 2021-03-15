@@ -44,11 +44,18 @@
                 Apple
                 <!--product name above-->
               </div>
-              <div class = "prodquantity">
+              <div class = "prodquantity">Size desired 
                 <div style="line-height:55%;">
     <br>
+</div><select name = "size" id = "size">
+  <option value = "1">  50g-</option>
+ <option value = "2">  100g-</option>
+ <option value = "3">  150g-</option>
+</select>
+<div style="line-height:55%;">
+  <br>
 </div>Type desired<div style="line-height:55%;">
-    <br>
+  <br>
 </div>
                 <select name = "type" id = "typ">
     <option value = "honeycrisp"> Honey Crisp </option>
@@ -61,18 +68,19 @@
                 <div class = "price"><div style="line-height:75%;">
     <br>
 </div>
-                  1,40$<span class = "perqty">/apple</span>
+               <div id = "prices" data-value="1.40">   1,40$</div>
                   
                   <!--price above-->
                 </div>
                <div style="line-height:45%;">
     <br>
 </div>
-                Nutrient-filled apple (170g avg.)
+                Nutrient-filled apple 
                 <!--description above-->
                 <label for="desc"></label>
                 <br>
-  <input type="button" class = "button" id="desc" name="desc" value = "Naturally grown and 100% organic apples from our finest farms!">
+  <input type="button" class = "button" id="desc" name="desc" value = "More description">
+  <a id = "moredesc" style = "display:none; position:absolute;"> Naturally grown and 100% organic apples from our finest farms</a>
                  <div style="line-height:75%;">
     <br>
                 </div>  
@@ -87,7 +95,7 @@
             <tr>
               <td class = "quantitydesired">Quantity desired
                 <label for="qty"></label>
-                <input class="quantity" id="qty" min="1" max = "12" name="qty" value="1" type="number">
+                <input class="quantity" id="qty" min="1" max = "53" name="qty" value="1" type="number">
                   <!--change max above-->
                 <div class = "stock">53 in stock;</div>
                 <!--quantity in stock above-->
@@ -131,8 +139,7 @@
    <p class="copyright">MAVE GROCERIES © 2021</p>
    
 </footer>
-  
-  
+<script src="../Javascript/ProductPageJS.js"></script> 
    </body>
    
    

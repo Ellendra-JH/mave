@@ -44,10 +44,20 @@
                 Strawberries
                 <!--product name above-->
               </div>
-              <div class = "prodquantity">
+              
+              <div class = "prodquantity">Size desired
                 <div style="line-height:55%;">
     <br>
-</div><div style="line-height:55%;">
+</div>
+
+<select name = "size" id = "size">
+  <option value = "1">  50g-</option>
+ <option value = "2">  100g-</option>
+ <option value = "3">  150g-</option>
+<!--different sizes above-->
+                  
+</select>
+<div style="line-height:55%;">
     <br>
 </div>
 
@@ -55,18 +65,19 @@
                 <div class = "price"><div style="line-height:75%;">
     <br>
 </div>
-                  4,99$<span class = "perqty">/box</span>
+              <div id = "prices" data-value = "4.99">4,99$</div>
                   
                   <!--price above-->
                 </div>
                <div style="line-height:45%;">
     <br>
 </div>
-                Organic Strawberries (545g)
+                
                 <!--description above-->
-                <label for="desc"></label>
-                <br>
-  <input type="button" class = "button" id="desc" name="desc" value = "Fresh, organic and handpicked strawberries!">
+                <label for="desc"> Organic Strawberries </label>
+                 <br>
+  <input type="button" class = "button" id="desc" name="desc" value = "More description"> 
+  <a id = "moredesc" style = "display:none; position:absolute;"> Fresh, organic and handpicked strawberries!</a>
                  <div style="line-height:75%;">
     <br>
                 </div>  
@@ -81,7 +92,7 @@
             <tr>
               <td class = "quantitydesired">Quantity desired
                 <label for="qty"></label>
-                <input class="quantity" id="qty" min="1" max = "12" name="qty" value="1" type="number">
+                <input class="quantity" id="qty" min="1" max = "23" name="qty" value="1" type="number">
                   <!--change max above-->
                 <div class = "stock">23 in stock;</div>
                 <!--quantity in stock above-->
@@ -126,7 +137,7 @@
    
 </footer>
   
-  
+<script src="../Javascript/ProductPageJS.js"></script> 
    </body>
    
    

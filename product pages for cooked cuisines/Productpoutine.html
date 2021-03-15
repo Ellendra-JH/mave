@@ -39,9 +39,9 @@
 							Size
 							<div style="line-height:55%;"><br></div>
 							<select name = "size" id = "size">
-								<option value = "small">Small</option>
-								<option value = "medium">Medium</option>
-								<option value = "large">Large</option>		
+								<option value = "1">Small</option>
+								<option value = "2">Medium</option>
+								<option value = "3">Large</option>		
 							</select>
 							<div style="line-height:55%;"><br>
 							</div>
@@ -60,7 +60,7 @@
 							<!--product price -->				
 							<div class = "price">
 								<div style="line-height:75%;"><br></div>
-								2.99$
+								<div id = "prices" data-value = "2.99">2.99$ </div>
 							</div>
 							
 							<!--product description-->
@@ -68,7 +68,8 @@
 								<h3>A Dish That Would Give Your Taste a Magic Taste.</h3>
 								<label for="desc"></label>
 								
-								<input type="button" class = "button"  value = "More Description">
+								<input type="button"  class = "button"  id="desc" value = "More description">
+								<a id = "moredesc" style = "display:none; position:absolute;"> Warm freshly cooked poutines</a>
 							<div style="line-height:75%;"><br></div>  
 						</div>
 					</td>
@@ -115,5 +116,6 @@
 			</div>
 		   <p class="copyright">MAVE GROCERIES © 2021</p>
 		</footer>
+		<script src="../Javascript/ProductPageJS.js"></script> 
 	</body>
 </html>
