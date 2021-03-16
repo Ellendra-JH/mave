@@ -80,7 +80,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     margin:0 ;
-    font-family: Futura
+    font-family: Futura;
+    background-color: black;
 }
 
 .title{
@@ -179,7 +180,7 @@ th:last-child{
 }
 
 .ordertotal{
-	font-color:red;
+	color:red;
 } 
 h2{
 	text-align:center; 
