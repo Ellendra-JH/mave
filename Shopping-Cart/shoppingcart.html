@@ -45,46 +45,29 @@
 			   <img src="clorax.png"> 
 				 <div>
 				  <p>Clorox Disinfecting Wipes</p> <!--Product Name -->
-			       <medium> Product Price: $5.49</medium><br><br> <!--Product Price -->
+				  <medium> Product Price: $5.49</medium><br><br> <!--Product Price -->
 				   <button class="btnED">Delete</button> <!--Delete Button -->
 				 </div>
 			 </div>
 	      </td>
-		 <td><input type="number" value="1"></td> <!-- Quantity -->
-		<td>$5.49</td><!--Final Price of Produce -->
+		 <td> <!-- Quantity -->
+		    <div class="quantity">
+			   <button class="btn3" type="button">-</button> <!--btn3 minus -->
+			   <input type="text" id="quantity" value="1"> 
+			   <button class="btn4" type="button">+</button> <!--btn4 addition --> 
+			</div>
+		 </td> 
+		<td>
+			<p class="total-price">
+				<p>$
+				<span id="price">5.49</span>
+                </p> 				
+			</p>
+		
+		</td><!--Final Price of Produce -->
 			
 		 </tr>
-		 <!-- Third Row -->
-		 <tr>
-		    <td>
-			   <div class="cart-info">
-			       <img src="blackfabreeze.png"> 
-				   <div>
-				       <p>Fabreeze</p><!--Product Name -->
-					   <medium>Product Price: $3.99</medium><br><br><!--Product Price -->
-					   <button class="btnED">Delete</button> <!--Delete Button -->
-				   </div>
-			   </div>
-			</td>
-			<td><input type="number" value="2"></td>
-			<td>$7.98</td><!--Final Price of Produce -->
-		 </tr>
-		 <!-- Fourth Row-->
-		 <tr>
-		    <td>
-			   <div class="cart-info">
-			       <img src="bounty.png"> 
-				   <div>
-				       <p>Bounty Paper Towel</p><!--Product Name -->
-					   <medium>Product Price: $4.99</medium><br><br><!--Product Price -->
-					   <button class="btnED">Delete</button><!--Delete Button -->
-				   </div>
-			   </div>
-			</td>
-			<td><input type="number" value="1"></td>
-			<td>$4.99</td><!--Final Price of Produce -->
-			
-		 </tr>
+
 	  </table>
 	  <!-- New table for Total Price including taxes -->
 	  <div class="total-price"> 
@@ -94,32 +77,48 @@
 		  </tr> 	
 		  <tr>
 		    <td>Number of Items: </td>
-			<td>4</td>
+			<td>
+			<class="total-quantity">
+				<span id="totalQuantity"></span>
+			</td>
 		  </tr> 		  
 		  <tr>
 		    <td>Total before tax:</td>
-			<td>$18.46</td>
+			<td>
+				<class="total-price"> $
+				<span id="beforeTax"></span>
+			</td>
 		  </tr> 
 	      <tr>
-		    <td>Estimated GST:</td>
-			<td>$1.10</td>
+		    <td>Estimated GST:</td> 
+			<td> 
+			<class="total-price"> $
+				<span id="GST"></span>
+			</td>
 		  </tr> 
 		   <tr>
 		    <td>Estimated QST:</td>
-			<td>$0.97</td>
+			<td>
+			<class="total-price">$
+				<span id="QST"></span>
+			</td>
 		  </tr>
 		  <tr>
 		    <td><h3>Order Total:<h3></td> <!--Final Price-->
-			<td><h3>$20.53</h3></td>
+			<td><h3>
+			<class="total-price">$
+				<span id="finalPrice"></span>
+			</h3></td>
 		  </tr>
 	     </table>
 	  </div>
     <!-- Buttons for Continue shopping and Pay now)-->
 	<div class="container">
-     <a href="../index.html"><button class="btn1">Continue Shopping</button> <br> </a>
+     <button class="btn1">Continue Shopping</button> <br>
 	 <button class="btn1">Pay Now</button>
     </div>
    </div>
+ <script src="shoppingcart.js"></script>
 </body>
 
 <!--Footer -->

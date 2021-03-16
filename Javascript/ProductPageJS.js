@@ -30,11 +30,6 @@ if (document.getElementById("qty").value == "")
  document.getElementById("size").value = "1"
 }
 
-
-
-
-
-
 document.getElementById("desc").onclick = function () {
   
                                                        if (this.value == "More description"){
