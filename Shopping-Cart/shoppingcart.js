@@ -1,9 +1,10 @@
 window.onbeforeunload = function() {
-    localStorage.setItem("theqty", document.getElementById("quantity").value);  
+    localStorage.setItem("theqty", document.getElementById("quantity").value);
+    localStorage.setItem("body", document.getElementsByTagName("body").innerHTML);  
   }
   
    window.onload = function() {
- 
+ localStorage.getItem("body");
 
     document.getElementById("quantity").value = localStorage.getItem("theqty");
     if (document.getElementById("quantity").value == ""){
@@ -46,6 +47,16 @@ function deleteRow(e){
 	} 
 	const btn=e.target;
 	btn.closest("tr").remove(); 
+
+
+   document.getElementById("totalQuantity").innerText=0;
+   document.getElementById("QST").innerText=0;
+   document.getElementById("beforeTax").innerText = 0;
+   if (document.getElementById("price"))
+   document.getElementById("price").innerText = 0;
+   document.getElementById("GST").innerText=0;
+
+   document.getElementById("finalPrice").innerText = 0
 }
 
 tableEL.addEventListener('click', deleteRow); 
@@ -53,7 +64,6 @@ tableEL.addEventListener('click', deleteRow);
 
 
 //taking value to increment decrement input value 
-
 
 
 
