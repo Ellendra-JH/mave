@@ -1,13 +1,16 @@
 window.onbeforeunload = function() {
-    localStorage.setItem("theqty", document.getElementById("quantity").value);
-   
-    
-  
+    localStorage.setItem("theqty", document.getElementById("quantity").value);  
   }
   
    window.onload = function() {
-   
+ 
+
     document.getElementById("quantity").value = localStorage.getItem("theqty");
+    if (document.getElementById("quantity").value == ""){
+    document.getElementById("quantity").value = "1"
+    localStorage.setItem("theqty", document.getElementById("quantity").value);  
+
+    }
    document.getElementById("totalQuantity").innerText= localStorage.getItem("theqty");  
 
    
@@ -47,8 +50,7 @@ function deleteRow(e){
 
 tableEL.addEventListener('click', deleteRow); 
 //everything for price and quantity below
-//setting default attributes to disabled of minus button 
-document.querySelector(".btn3").setAttribute("disabled","disabled"); 
+
 
 //taking value to increment decrement input value 
 
@@ -117,7 +119,7 @@ document.querySelector(".btn4").addEventListener("click",function(){
 	//setting increment input value 
 	document.getElementById("quantity").value=valueCount; 
 	
-	if(valueCount>1){
+	if(valueCount>1|| valueCount == undefined){
         document.querySelector(".btn3").removeAttribute("disabled"); 
         document.querySelector(".btn3").classList.remove("disabled"); 
         } 
