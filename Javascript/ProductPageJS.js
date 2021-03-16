@@ -1,5 +1,7 @@
 
- if (document.getElementById("qty").value == "")
+var w = document.getElementById("moredesc");
+
+if (document.getElementById("qty").value == "")
  document.getElementById("qty").value = "1"
  if (document.getElementById("size").value == "")
  document.getElementById("size").value = "1"
@@ -34,12 +36,13 @@
 
 
 document.getElementById("desc").onclick = function () {
+  
                                                        if (this.value == "More description"){
   this.value = "Less description"    
-                                                         y.style="display:inline;"
+                                                         w.style="display:inline;"
 }
                                                      else{
-y.style="display:none;"; 
+w.style="display:none;"; 
 this.value = "More description"                            
 }}
 
