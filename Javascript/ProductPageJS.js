@@ -1,5 +1,8 @@
 
- 
+ if (document.getElementById("qty").value == "")
+ document.getElementById("qty").value = "1"
+ if (document.getElementById("size").value == "")
+ document.getElementById("size").value = "1"
 
 
  window.onbeforeunload = function() {
@@ -19,11 +22,10 @@
  let nn = document.getElementById("prices").dataset.value *document.getElementById("qty").value*document.getElementById("size").value;
  z.innerHTML = nn.toFixed(2) + "$";
  
-if (document.getElementById("qty").value == null)
-document.getElementById("qty").value = "1"
-if (document.getElementById("size").value == null)
-document.getElementById("size").value = "1"
-
+ if (document.getElementById("qty").value == "")
+ document.getElementById("qty").value = "1"
+ if (document.getElementById("size").value == "")
+ document.getElementById("size").value = "1"
 }
 
 
