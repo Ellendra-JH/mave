@@ -21,10 +21,8 @@ window.onbeforeunload = function() {
    document.getElementById("QST").innerHTML=q.toFixed(2);
    document.getElementById("beforeTax").innerText = yy;
    document.getElementById("price").innerText = yy;
-   let pricetest=document.getElementById("price").innerText; 
-   let testGSTTotal=pricetest*0.10; 
     document.getElementById("GST").innerText = g.toFixed(2);
- let final = localStorage.getItem("theqty")*document.getElementById("price").dataset.value+localStorage.getItem("theqty")*document.getElementById("price").dataset.value*0.05+localStorage.getItem("theqty")*document.getElementById("price").dataset.value*0.10
+    let final = localStorage.getItem("theqty")*document.getElementById("price").dataset.value+localStorage.getItem("theqty")*document.getElementById("price").dataset.value*0.05+localStorage.getItem("theqty")*document.getElementById("price").dataset.value*0.10
    document.getElementById("finalPrice").innerHTML = final.toFixed(2)
   } 
 
@@ -119,7 +117,7 @@ document.querySelector(".btn4").addEventListener("click",function(){
 	//setting increment input value 
 	document.getElementById("quantity").value=valueCount; 
 	
-	if(valueCount>0){
+	if(valueCount>1){
         document.querySelector(".btn3").removeAttribute("disabled"); 
         document.querySelector(".btn3").classList.remove("disabled"); 
         } 
