@@ -1,4 +1,30 @@
+<?php
+session_start();
+$host = "localhost";
+$user = "root";
+$email = "";
+$password = "";
+$error = "";
+$db = "data";
+$success = "";
+$con = mysqli_connect($host,$user,$password,$email);
+mysqli_select_db($con, $db);
+if (isset($_POST['submit'])) {
+	if (empty($_POST['username']) || empty($_POST['password'])) {
+		$error = "You must fill everything";
+		}
+		else{
+			$name = $_POST['username'];
+			$pass = $_POST['password'];
+			$mail = $_POST['email'];
+			$sql = "INSERT INTO login (User, Password, email) VALUES ('$name', '$pass', '$mail') ";
+			$success = "You can now go to the login page to login";
+			mysqli_query($con,$sql);
+		}
+}
+?>
 <html lang="en">
+	
 	<head>
 		<title>Sign Up</title>
 		<link rel="stylesheet" type="text/css" href="css/SignUp.css" />
@@ -14,32 +40,34 @@
 							<!-- HEADER -->
 							
 		<div class="header">
-			   <a href="#home" class="logo"><img src="img/logo.png" alt="logo" width="65px" ></a>
-			   <a href="#login"> <button class="cart"> <img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
-			   <a href="#login"> <button class="btn"> Login  </button> </a> 
+			   <a href="../index.html" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
+			   <a href="../Shopping-Cart/shoppingcart.html"> <button class="cart"> <img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
+			   <a href="Login.html"> <button class="btn"> Login  </button> </a> 
 		</div>
 							<!-- NAV BAR -->
 							
 		<nav class="nav">
-			<a href="#home"><h3>Return to Homepage</h3></a>
+			<a href="../index.html"><h3>Return to Homepage</h3></a>
 		</nav>
 							<!-- SIGN UP -->
-		<div class="container">
+		<div class="container" style = "height:675px;">
 		<img src="img/avatar.png" class="icon">
 			<h1>Sign Up</h1>
-			<form>
+			<span style = "color:red;"><?php echo $error; ?></span>
+			<form method = "POST" action = "">
 				<p>Full Name</p>
-				<input type="text" name="" placeholder="Enter Full Name">
+				<input type="text" name="username" style = "color:black;" placeholder="Enter Full Name" >
 				<p>Email Address</p>
-				<input type="email" name="" placeholder="Enter Email Address">
+				<input type="email" name="email" style = "color:black;" placeholder="Enter Email Address">
 				<p>Password</p>
-				<input type="password" name="" placeholder="Enter Password">
+				<input type="password" name="password" style = "color:black;" placeholder="Enter Password">
 				<label> 
 					<input type="checkbox">  
 						I agree to the <a href="termsandconditionlink"><u>Terms and Conditions.</u></a>
 				</label>
-				<input type="submit" name="" value="Sign Up">
-				<h6>Already have an account? <a href="signinpage.com"><u>Sign in</u></a><br></h6>
+				<input type="submit" name="submit" value="Sign Up">
+				<h6>Already have an account? <a href="Login.html"><u>Sign in</u></a><br></h6>
+				<span style = "color:green;"><?php echo $success; ?></span>
 			</form>
 		</div>
 		
