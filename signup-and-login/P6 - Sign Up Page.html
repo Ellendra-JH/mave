@@ -10,8 +10,8 @@ $success = "";
 $con = mysqli_connect($host,$user,$password,$email);
 mysqli_select_db($con, $db);
 if (isset($_POST['submit'])) {
-	if (empty($_POST['username']) || empty($_POST['password'])) {
-		$error = "You must fill everything";
+	if (empty($_POST['username']) || empty($_POST['password']) || $_POST['username'] == "admin") {
+		$error = "You must fill everything and no 'admin' name";
 		}
 		else{
 			$name = $_POST['username'];
