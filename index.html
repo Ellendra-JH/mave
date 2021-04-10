@@ -33,12 +33,13 @@ if (isset($_SESSION['user'])){
    echo "document.getElementById('log').innerHTML = 'logout'";
    echo "</script>";
    
-}
+
 if ($_SESSION['user']=="admin"){
    echo "<script>";
       
       echo "document.getElementById('backend').style.display = 'inline'";
       echo "</script>";
+}
 }
 ?>
 
