@@ -1,2 +1,2 @@
     #allow .html to be processed as PHP 
-AddType application/x-httpd-php .html .htm
+AddHandler application/x-httpd-php .php .html
