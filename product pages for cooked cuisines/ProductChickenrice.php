@@ -17,11 +17,11 @@ session_start();
 		<a href="../signup-and-login/Login.php"> <button class="btn" id = "log"> Login  </button> </a> 
 </header>
 <?php
-		if (!$_SESSION['user']=="admin"){
-	echo "<script>";
+		if ($_SESSION['user']!="admin"){
+			echo "<script>";
 	   
-	   echo "document.getElementById('backend').style.display = 'none'";
-	   echo "</script>";
+			echo "document.getElementById('backend').style.display = 'none';";
+			echo "</script>";
  }
 		if (isset($_SESSION['user'])){
 		   echo "<script>";

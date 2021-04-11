@@ -20,12 +20,12 @@ session_start();
 		
 	</header>
  <?php
- if (!$_SESSION['user']=="admin"){
-echo "<script>";
-
-echo "document.getElementById('backend').style.display = 'none'";
-echo "</script>";
-}
+		if ($_SESSION['user']!="admin"){
+			echo "<script>";
+	   
+			echo "document.getElementById('backend').style.display = 'none';";
+			echo "</script>";
+ }
  if (isset($_SESSION['user'])){
   echo "<script>";
   

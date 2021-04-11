@@ -22,12 +22,12 @@ session_start();
 		
 	</header>
  <?php
- if (!$_SESSION['user']=="admin"){
-echo "<script>";
-
-echo "document.getElementById('backend').style.display = 'none'";
-echo "</script>";
-}
+		if ($_SESSION['user']!="admin"){
+			echo "<script>";
+	   
+			echo "document.getElementById('backend').style.display = 'none';";
+			echo "</script>";
+ }
  if (isset($_SESSION['user'])){
   echo "<script>";
   
@@ -47,7 +47,7 @@ echo "</script>";
 
 
 <nav class="navbar-2">
-  <a><h3> <a href="../index.html" class="sec"> <u>Home</u> &nbsp;&nbsp;  / </a> &nbsp;&nbsp; <a href="Aisle Cleaning Supplies.html" class="sec"> <u> Cleaning Supplies Section </u>&nbsp;&nbsp; / </a>&nbsp;&nbsp; Bounty Paper Towels</h3></a>
+  <a><h3> <a href="../index.php" class="sec"> <u>Home</u> &nbsp;&nbsp;  / </a> &nbsp;&nbsp; <a href="Aisle Cleaning Supplies.php" class="sec"> <u> Cleaning Supplies Section </u>&nbsp;&nbsp; / </a>&nbsp;&nbsp; Bounty Paper Towels</h3></a>
 </nav>
      
 
@@ -58,7 +58,7 @@ echo "</script>";
          <tr >
             <td rowspan = "2" class = "pic" > <img src="bounty.png" alt = "Bounty Paper Towel" id = "center" /></td>
            <!--product image above-->
-            <td class = "aisl"> The<br><a href= "Aisle Cleaning Supplies.html">
+            <td class = "aisl"> The<br><a href= "Aisle Cleaning Supplies.php">
               <span style = "background-color:white ;color:black;"> Cleaning Supplies Section </span></a>
               <!--links to aisle above-->
             
@@ -118,7 +118,7 @@ echo "</script>";
                 <label for="crt"></label>
               
             
-<a href = "../Shopping-Cart/shoppingcart.html">  <input type="button" class = "cartbt" id="crt" name="crt" value = "Add to cart"  > </a></td>
+<a href = "../Shopping-Cart/shoppingcart.php">  <input type="button" class = "cartbt" id="crt" name="crt" value = "Add to cart"  > </a></td>
     
   </tr>
           </table>
