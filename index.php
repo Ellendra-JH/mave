@@ -1,122 +1,145 @@
 ﻿<?php
 session_start();
+?>
+<!DOCTYPE html>
 
-$host = "sql308.epizy.com";
-$user = "epiz_28361315";
-$email = "";
-$password = "j7UShEwhNjIPSXA";
+<html lang="en">
+<head>
 
-$db = "epiz_28361315_data";
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://kit.fontawesome.com/445988e632.js" crossorigin="anonymous"></script> 
+    <title>MAVE GROCERIES</title>
+    <meta name="description" content="This is our grocery store, we only sell overpriced 
+    groceries for Scandinavian DJs. It's like if Ikea, wholefoods and Gucci had a baby.">
 
-$con = mysqli_connect($host,$user,$password,$email);
-mysqli_select_db($con, $db);
+</head>
 
-if(isset($_SESSION['user'])){
-	$_SESSION['user'] = $username;
-	header("location: ../index.php");
+
+<header class="header">
+
+   <a href="index.php" class="logo"><img src="img/logo.png" alt="logo" width="65px" ></a>
+   <a href="ProductListAndEdit/EditProductList.html" class="logo"><img src="img/backend.png" alt="logo" width="65px" id = "backend" ></a>
+   <a href="Shopping-Cart/shoppingcart.html"> <button class="cart"><img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
+   <a href="signup-and-login/Login.php"> <button class="btn"  id = "log"> Login  </button> </a> 
+</header>
+<?php
+if (isset($_SESSION['user'])){
+   echo "<script>";
+
+   echo "document.getElementById('log').innerHTML = 'logout'";
+   echo "</script>";
+   
+
+if ($_SESSION['user']=="admin"){
+   echo "<script>";
+      
+      echo "document.getElementById('backend').style.display = 'inline'";
+      echo "</script>";
 }
-$error = "";	
-if (isset($_POST['submit'])) {
-	if (empty($_POST['username']) || empty($_POST['password'])) {
-	$error = "Username or Password is invalid";
-	}
-	else{
-		$con = mysqli_connect($host,$user,$password,$email);
-mysqli_select_db($con, $db);
-
-if(isset($_POST['username'])){
-    $name = $_POST['username'];
-    $pass = $_POST['password'];
-    $sql="select * from login where User = '".$name."' AND Password = '".$pass."' limit 1";
+}
+?>
 
 
+<nav>
+ <div> <img src="img/bogafinale4.png" alt="intro" class="responsive"> </div>
 
-
-    $result = mysqli_query($con, $sql);
-
-
-	if (mysqli_num_rows($result) == 1){
-		$_SESSION['user'] = $name;
-		header("location: ../index.php");
-	}
-    else{
-		$error = "Username or Password is invalid";
-		
+</nav>
     
-    }
 
-	}
-}
-}
-
+<nav class="navbar-2">
+  <a href="index.php"><h3>Home</h3></a>
+</nav>
 
 
 
-?><html lang="en">
-	<head>
-		<title>Log In</title>
-		<link rel="stylesheet" type="text/css" href="css/login.css" />
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		<script src="https://kit.fontawesome.com/445988e632.js" crossorigin="anonymous"></script>
-		<meta name="description" content="Login interface.">
-	</head>
-	<body>
+<body>
 
-					<!-- HEADER -->
 
-		<div class="header">
-			   <a href="../index.php" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
-			   <a href="../Shopping-Cart/shoppingcart.html"> <button class="cart"> <img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
-		</div>
-							
-					<!-- NAV BAR -->
-							
-		<nav class="nav">
-			<a href="../index.php"><h3>Return to Homepage</h3></a>
-		</nav>
-					
-					<!-- LOG IN -->
-					
-		<div class="container" style = "height:450px;">
-		<img src="img/avatar.png"  class="icon">
-			<h1>Login</h1>
-			
-			<form method = "POST" action = "">
-				<p>Email Address</p>
-				<input type="text" name="username" placeholder="Enter Email" style = "color:black;">
-				<p>Password</p>
-				<input type="password" name="password" placeholder="Enter Password" style = "color:black;">
-				<input type="submit" name="submit" value="Login">
-				
-				<a href="#"><u>Forgot your password?</u></a><br>
-				<a href="P6 - Sign Up Page.html"><u>Don't have an account?</u></a><br>
-				<span style = "color:red;"><?php echo $error; ?></span>
-				
-			</form>
-		</div>
-		
-					<!-- BG -->
-		
-		<div class="photo">
-			<img src="img/grocerylogin.jpg" class="side">
-		</div>
-		
-					<!--FOOTER -->
-	
+   
+
+    <!--the home page starts here-->    
+    <div class="container">
+
+      
+      
+
+      <!-- Vegetables container-->
+      <a href="Vegetables/AisleVegetables.html">
+          <div class="categories"> <img src="img/v.png" alt="Vegetables" class="item-image"> 
+            <div class="out-the-box"><p>Vegetables</p><h4>Fresh Veggies Hand Picked Especially For You</h4></div>
+         </div>
+         
+
+       </a>
+
+       
+       <!--Fruits container-->
+        <a href="Aisle Fruit/Fruit Aisle.html">
+       <div class="categories"> <img src="img/f.png" alt="Fruits" class="item-image"> 
+         <div class="out-the-box"><p>Fruits</p><h4>Picked From around the world to your hands</h4></div>
+      </div>
+
+       </a>
+
+       <!--Meats container-->
+        <a href="AisleMeat/AisleMeats.html">
+         <div class="categories"> <img src="img/meat.png" alt="Meats" class="item-image">
+            <div class="out-the-box"><p>Meats</p><h4>Handling your meat with precision and care.</h4></div>
+          </div>
+       </a>
+
+       
+      
+      
+       
+      <!--Baked Goods container-->
+      <a href="BakedGoods/AisleBakedGoods.html">
+         <div class="categories"> <img src="img/backed.png" alt="Baked Goods" class="item-image"> 
+            <div class="out-the-box"><p>Baked Goods</p><h4>Endless discovery of delicious bakery</h4></div>
+         </div>
+      </a>
+
+      <!--Cleaning products container-->
+      <a href="Aisle Cleaning Supplies/Aisle Cleaning Supplies.html">
+         <div class="categories"> <img src="img/cs.png" alt="Cleaning products " class="item-image">
+            <div class="out-the-box"><p>Cleaning products</p><h4>Everything you need for cleaning </h4></div>
+          </div>
+      </a>
+
+      <!--Cooked Goods container-->
+      <a href="Aisle Cooked Cuisines/Aislecookedgds.html">
+         <div class="categories"> <img src="img/CC.png" alt="Cooked Goods" class="item-image"> 
+            <div class="out-the-box"><p>Cooked Goods</p><h4>The pleasure of variety on your plate </h4></div>
+         </div>
+      </a>
+
+     
+      
+
+    </div>
+
+
+
+    <!--the home page ends here-->
+    
+    
+</body>
+
 <footer>
    
 
-   <div class="cprMessage">
+   <div class="text-ma">
       <h4>MAVE: SOEN-287 project </h4>
-          <a href="#team"> Check out our team members!</a>
+          <a href="#team"> check out our team members</a>
    </div>
    
    <br><br><br>
 
-   <div class="socials">
+   <div class="social-menu">
       <ul>
       <li><a href="#facebook"><i class="fab fa-facebook-f"></i></a></li>
       <li><a href="#instgram"><i class="fab fa-instagram"></i></a></li>
@@ -130,6 +153,5 @@ if(isset($_POST['username'])){
    
 </footer>
 
-	</body>
+</html>
 
-	</html>
