@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 			<a href="../index.php"><h3>Return to Homepage</h3></a>
 		</nav>
 							<!-- SIGN UP -->
-		<div class="container" style = "height:675px;">
+		<div class="container" style = "height:600px;">
 		<img src="img/avatar.png" class="icon">
 			<h1>Sign Up</h1>
 			<span style = "color:red;"><?php echo $error; ?></span>
@@ -64,10 +64,7 @@ if (isset($_POST['submit'])) {
 				<input type="email" name="email" style = "color:black;" placeholder="Enter Email Address">
 				<p>Password</p>
 				<input type="password" name="password" style = "color:black;" placeholder="Enter Password">
-				<label> 
-					<input type="checkbox">  
-						I agree to the <a href="termsandconditionlink"><u>Terms and Conditions.</u></a>
-				</label>
+			
 				<input type="submit" name="submit" value="Sign Up">
 				<h6>Already have an account? <a href="Login.php"><u>Sign in</u></a><br></h6>
 				<span style = "color:green;"><?php echo $success; ?></span>
