@@ -92,7 +92,7 @@ if(isset($_POST['username'])){
 				<input type="submit" name="submit" value="Login">
 				
 				<a href="#"><u>Forgot your password?</u></a><br>
-				<a href="P6 - Sign Up Page.html"><u>Don't have an account?</u></a><br>
+				<a href="P6 - Sign Up Page.php"><u>Don't have an account?</u></a><br>
 				<span style = "color:red;"><?php echo $error; ?></span>
 				
 			</form>

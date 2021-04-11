@@ -1,4 +1,14 @@
 /*Header*/
+body {
+	background-image: url("BG1.PNG"); 
+    background-color:black;
+    background-size: cover;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+  
+
+}
 header{
     background-color: rgb(255, 255, 255); 
 }
@@ -76,12 +86,12 @@ color:#460707b4;
 
  /*Body & Table Style*/
 body {
-	background-image: url("BG1.png"); 
+	background-image: url("BG1.PNG"); 
     background-size: cover;
     background-attachment: fixed;
     padding:0;
     margin:0;
-   font-family: Futura
+  
 
 }
 
@@ -127,7 +137,7 @@ td{
 td input{
 	width:40px;
 	height:30px;
-	paddding: 5px; 
+	padding: 5px; 
 } 
 
 td a{

@@ -1,11 +1,14 @@
 <?php
 session_start();
-$host = "localhost";
-$user = "root";
+$host = "sql308.epizy.com";
+$user = "epiz_28361315";
 $email = "";
-$password = "";
+$password = "j7UShEwhNjIPSXA";
+
+
+
 $error = "";
-$db = "data";
+$db = "epiz_28361315_data";
 $success = "";
 $con = mysqli_connect($host,$user,$password,$email);
 mysqli_select_db($con, $db);
