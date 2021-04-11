@@ -16,10 +16,10 @@ session_start();
 	</head>
 
 	<header class="header">
-	   <a href="../index.html" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
-	   <a href="ProductListAndEdit/EditProductList.php" class="logo"><img src="img/backend.png" alt="logo" width="65px" id = "backend" ></a>
-	   <a href="../Shopping-Cart/shoppingcart.html"> <button class="cart"> <img src="../img/shopping-cart.png" alt="shopping-cart" width="50%"> </button> </a>
-	   <a href="../signup-and-login/Login.html"> <button class="btn"> Login  </button> </a> 
+	   <a href="../index.php" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
+	   <a href="ProductListAndEdit/EditProductList.php" class="logo"><img src="../img/backend.png" alt="logo" width="65px" id = "backend" ></a>
+	   <a href="../Shopping-Cart/shoppingcart.php"> <button class="cart"> <img src="../img/shopping-cart.png" alt="shopping-cart" width="50%"> </button> </a>
+	   <a href="../signup-and-login/Login.php"> <button class="btn" id = "log"> Login  </button> </a> 
 	</header>
 	<?php
 		if (!$_SESSION['user']=="admin"){
@@ -43,16 +43,16 @@ session_start();
 		}
 		?>	
 	<nav class="navbar-2">
-		<a href="../index.html"  style="color:#460707b4;"><h3><u>Home</u> &nbsp;&nbsp;  / </a> &nbsp;&nbsp; <a href="OrderList.html" style = "color:black;"> Order List</h3></a>
+		<a href="../index.php"  style="color:#460707b4;"><h3><u>Home</u> &nbsp;&nbsp;  / </a> &nbsp;&nbsp; <a href="OrderList.php" style = "color:black;"> Order List</h3></a>
 	</nav>
 		
 	<body>
 		<!--the order page starts here-->
 			<div class = "sidebar">
-				<a href="../index.html">Home</a>
-				<a href="../ProductListAndEdit/ProductList.html">Product List</a>
-				<a href="../User List/userlist.html">User List</a>
-				<a href="OrderList.html">Order List</a>
+				<a href="../index.php">Home</a>
+				<a href="../ProductListAndEdit/ProductList.php">Product List</a>
+				<a href="../User List/userlist.php">User List</a>
+				<a href="OrderList.php">Order List</a>
 			</div>
 		<div class="container">
 			<!-- order list information container-->			
