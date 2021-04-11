@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,10 +17,31 @@
 
 	<header class="header">
 	   <a href="../index.html" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
+	   <a href="ProductListAndEdit/EditProductList.php" class="logo"><img src="img/backend.png" alt="logo" width="65px" id = "backend" ></a>
 	   <a href="../Shopping-Cart/shoppingcart.html"> <button class="cart"> <img src="../img/shopping-cart.png" alt="shopping-cart" width="50%"> </button> </a>
 	   <a href="../signup-and-login/Login.html"> <button class="btn"> Login  </button> </a> 
 	</header>
-
+	<?php
+		if (!$_SESSION['user']=="admin"){
+	echo "<script>";
+	   
+	   echo "document.getElementById('backend').style.display = 'none'";
+	   echo "</script>";
+ }
+		if (isset($_SESSION['user'])){
+		   echo "<script>";
+		 
+		   echo "document.getElementById('log').innerHTML = 'logout'";
+		   echo "</script>";
+		   
+		}
+		if ($_SESSION['user']=="admin"){
+		   echo "<script>";
+			  
+			  echo "document.getElementById('backend').style.display = 'inline'";
+			  echo "</script>";
+		}
+		?>	
 	<nav class="navbar-2">
 		<a href="../index.html"  style="color:#460707b4;"><h3><u>Home</u> &nbsp;&nbsp;  / </a> &nbsp;&nbsp; <a href="OrderList.html" style = "color:black;"> Order List</h3></a>
 	</nav>
