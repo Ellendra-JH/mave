@@ -69,7 +69,7 @@ if(isset($_POST['username'])){
 
 		<div class="header">
 			   <a href="../index.php" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
-			   <a href="../Shopping-Cart/shoppingcart.html"> <button class="cart"> <img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
+			   <a href="../Shopping-Cart/shoppingcart.php"> <button class="cart"> <img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
 		</div>
 							
 					<!-- NAV BAR -->

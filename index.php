@@ -22,8 +22,8 @@ session_start();
 <header class="header">
 
    <a href="index.php" class="logo"><img src="img/logo.png" alt="logo" width="65px" ></a>
-   <a href="ProductListAndEdit/EditProductList.html" class="logo"><img src="img/backend.png" alt="logo" width="65px" id = "backend" ></a>
-   <a href="Shopping-Cart/shoppingcart.html"> <button class="cart"><img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
+   <a href="ProductListAndEdit/EditProductList.php" class="logo"><img src="img/backend.png" alt="logo" width="65px" id = "backend" ></a>
+   <a href="Shopping-Cart/shoppingcart.php"> <button class="cart"><img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
    <a href="signup-and-login/Login.php"> <button class="btn"  id = "log"> Login  </button> </a> 
 </header>
 <?php
@@ -68,7 +68,7 @@ if ($_SESSION['user']=="admin"){
       
 
       <!-- Vegetables container-->
-      <a href="Vegetables/AisleVegetables.html">
+      <a href="Vegetables/AisleVegetables.php">
           <div class="categories"> <img src="img/v.png" alt="Vegetables" class="item-image"> 
             <div class="out-the-box"><p>Vegetables</p><h4>Fresh Veggies Hand Picked Especially For You</h4></div>
          </div>
@@ -78,7 +78,7 @@ if ($_SESSION['user']=="admin"){
 
        
        <!--Fruits container-->
-        <a href="Aisle Fruit/Fruit Aisle.html">
+        <a href="Aisle Fruit/Fruit Aisle.php">
        <div class="categories"> <img src="img/f.png" alt="Fruits" class="item-image"> 
          <div class="out-the-box"><p>Fruits</p><h4>Picked From around the world to your hands</h4></div>
       </div>
@@ -86,7 +86,7 @@ if ($_SESSION['user']=="admin"){
        </a>
 
        <!--Meats container-->
-        <a href="AisleMeat/AisleMeats.html">
+        <a href="AisleMeat/AisleMeats.php">
          <div class="categories"> <img src="img/meat.png" alt="Meats" class="item-image">
             <div class="out-the-box"><p>Meats</p><h4>Handling your meat with precision and care.</h4></div>
           </div>
@@ -97,21 +97,21 @@ if ($_SESSION['user']=="admin"){
       
        
       <!--Baked Goods container-->
-      <a href="BakedGoods/AisleBakedGoods.html">
+      <a href="BakedGoods/AisleBakedGoods.php">
          <div class="categories"> <img src="img/backed.png" alt="Baked Goods" class="item-image"> 
             <div class="out-the-box"><p>Baked Goods</p><h4>Endless discovery of delicious bakery</h4></div>
          </div>
       </a>
 
       <!--Cleaning products container-->
-      <a href="Aisle Cleaning Supplies/Aisle Cleaning Supplies.html">
+      <a href="Aisle Cleaning Supplies/Aisle Cleaning Supplies.php">
          <div class="categories"> <img src="img/cs.png" alt="Cleaning products " class="item-image">
             <div class="out-the-box"><p>Cleaning products</p><h4>Everything you need for cleaning </h4></div>
           </div>
       </a>
 
       <!--Cooked Goods container-->
-      <a href="Aisle Cooked Cuisines/Aislecookedgds.html">
+      <a href="Aisle Cooked Cuisines/Aislecookedgds.php">
          <div class="categories"> <img src="img/CC.png" alt="Cooked Goods" class="item-image"> 
             <div class="out-the-box"><p>Cooked Goods</p><h4>The pleasure of variety on your plate </h4></div>
          </div>

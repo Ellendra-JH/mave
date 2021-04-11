@@ -43,14 +43,14 @@ if (isset($_POST['submit'])) {
 							<!-- HEADER -->
 							
 		<div class="header">
-			   <a href="../index.html" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
-			   <a href="../Shopping-Cart/shoppingcart.html"> <button class="cart"> <img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
-			   <a href="Login.html"> <button class="btn"> Login  </button> </a> 
+			   <a href="../index.php" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
+			   <a href="../Shopping-Cart/shoppingcart.php"> <button class="cart"> <img src="img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
+			   <a href="Login.php"> <button class="btn"> Login  </button> </a> 
 		</div>
 							<!-- NAV BAR -->
 							
 		<nav class="nav">
-			<a href="../index.html"><h3>Return to Homepage</h3></a>
+			<a href="../index.php"><h3>Return to Homepage</h3></a>
 		</nav>
 							<!-- SIGN UP -->
 		<div class="container" style = "height:675px;">
@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
 						I agree to the <a href="termsandconditionlink"><u>Terms and Conditions.</u></a>
 				</label>
 				<input type="submit" name="submit" value="Sign Up">
-				<h6>Already have an account? <a href="Login.html"><u>Sign in</u></a><br></h6>
+				<h6>Already have an account? <a href="Login.php"><u>Sign in</u></a><br></h6>
 				<span style = "color:green;"><?php echo $success; ?></span>
 			</form>
 		</div>
