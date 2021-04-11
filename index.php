@@ -56,7 +56,7 @@ if ($_SESSION['user']=="admin"){
 
 
 
-<body>
+<body style = "background-color:black;">
 
 
    
