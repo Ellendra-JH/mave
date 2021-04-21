@@ -59,7 +59,7 @@ session_start();
 					
 			<div> 
 				<table class = "orders">
-					<form> 
+					<form action = "ProcessEdit.php" method = "post"> 
 						<tr>
 							<th colspan = 3>Order Information</th>
 						</tr>
