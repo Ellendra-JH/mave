@@ -68,7 +68,13 @@ session_start();
 						<th>Delivery Address</th>
 					</tr>
 					<tr  id = "samplerow">
-						<td></td>
+						<td>
+							<?php
+								$myfile = fopen("Orders.txt", "r") or die("Unable to open file!");
+								echo fread($myfile,filesize("Orders.txt"));
+								fclose($myfile);
+							?>
+						</td>
 						<td></td>
 						<td> </td>
 						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php"  class="button">Edit</a> 
@@ -76,7 +82,8 @@ session_start();
 					</tr>
 					<tr>
 						<td></td>
-						<td></td>
+						<td>
+						</td>
 						<td></td>
 						<td style = "background-color:white; max-width:1px;"><a input type = "button" href="EditOrderList.php"  class="button">Edit</a> 
 							<a onclick="toDelete(this);" href="#delete" class="button";>Delete</a></td>
