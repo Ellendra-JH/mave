@@ -68,32 +68,122 @@ session_start();
 						<th>Delivery Address</th>
 					</tr>
 					<tr  id = "samplerow">
-						<td></td>
-						<td></td>
-						<td> </td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
+						</td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
+						</td>
+						<td> 
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
+						</td>
 						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php"  class="button">Edit</a> 
 							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a></td>
 					</tr>
 					<tr>
-						<td></td>
-						<td></td>
+												<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
+						</td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
+						</td>
+						<td> 
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
 						<td></td>
 						<td style = "background-color:white; max-width:1px;"><a input type = "button" href="EditOrderList.php"  class="button">Edit</a> 
 							<a onclick="toDelete(this);" href="#delete" class="button";>Delete</a></td>
 					</tr>
          
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+												<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
+						</td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
+						</td>
+						<td> 
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
 						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php"  class="button">Edit</a>
 							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a></td>
 					</tr>
 				
 					<tr>
-						<td></td>
-						<td> </td>
-						<td></td>
+												<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
+						</td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
+						</td>
+						<td> 
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
 						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php" class="button">Edit</a> 
 							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a>
 				

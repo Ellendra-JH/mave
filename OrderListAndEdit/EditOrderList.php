@@ -55,8 +55,7 @@ session_start();
 				<a href="OrderList.php">Order List</a>
 			</div>
 		<div class="container">
-			<!-- order list information container-->			
-					
+			<!-- order list information container-->
 			<div> 
 				<table class = "orders">
 					<form action = "ProcessEdit.php" method = "post"> 
@@ -66,7 +65,8 @@ session_start();
 						<tr>
 							<td>Order Number</td>
 							<td>
-								<input type = "number" name = "orderNumber" size = "30" value="123456789">
+								<input type = "number" name = "orderNumber" size = "30" value=123456789>
+
 							</td>
 						</tr>
 					<!-- Order Address -->
@@ -99,8 +99,6 @@ session_start();
 								<label for="streetName">Street Address:</label>
 								<input type="text" id="streetName" name="streetName" value="123 4th Street East"><br><br>
 								<label for="appartment">Appartment, Suite, etc.</label>
-								<input type="text" id="appartment" name="appartment" value="1"><br><br>
-								<label for="province">Province/State:</label>
 								<input type="text" id="province" name="province" value="Quebec"><br><br>
 								<label for="city">City:</label>
 								<input type="text" id="city" name="city" value="Montreal"><br><br>
