@@ -71,14 +71,14 @@ session_start();
 						<td></td>
 						<td></td>
 						<td> </td>
-						<td style = "background-color:white; max-width:1px;"><a href="EditProductList.php" class="button">Edit</a> 
+						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php"  class="button">Edit</a> 
 							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a></td>
 					</tr>
 					<tr>
 						<td></td>
 						<td></td>
 						<td></td>
-						<td style = "background-color:white; max-width:1px;"><a input type = "button" href="EditProductList.php" class="button">Edit</a> 
+						<td style = "background-color:white; max-width:1px;"><a input type = "button" href="EditOrderList.php"  class="button">Edit</a> 
 							<a onclick="toDelete(this);" href="#delete" class="button";>Delete</a></td>
 					</tr>
          
@@ -86,7 +86,7 @@ session_start();
 						<td></td>
 						<td></td>
 						<td></td>
-						<td style = "background-color:white; max-width:1px;"><a href="EditProductList.php" class="button">Edit</a>
+						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php"  class="button">Edit</a>
 							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a></td>
 					</tr>
 				
@@ -94,7 +94,7 @@ session_start();
 						<td></td>
 						<td> </td>
 						<td></td>
-						<td style = "background-color:white; max-width:1px;"><a href="EditProductList.php" class="button">Edit</a> 
+						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php" class="button">Edit</a> 
 							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a>
 				
 				</table>

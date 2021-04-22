@@ -59,7 +59,7 @@ session_start();
 					
 			<div> 
 				<table class = "orders">
-					<form> 
+					<form action = "ProcessEdit.php" method = "post"> 
 						<tr>
 							<th colspan = 3>Order Information</th>
 						</tr>
@@ -67,12 +67,6 @@ session_start();
 							<td>Order Number</td>
 							<td>
 								<input type = "number" name = "orderNumber" size = "30" value="123456789">
-							</td>
-						</tr>
-						<tr>
-							<td>Order Details</td>
-							<td> 
-								<input type = "text" name = "info" size = "30"/>
 							</td>
 						</tr>
 					<!-- Order Address -->
@@ -111,7 +105,7 @@ session_start();
 								<label for="city">City:</label>
 								<input type="text" id="city" name="city" value="Montreal"><br><br>
 								<label for="country">Country:</label>
-								<input type="text" id="country" name="Country" value="Canada"><br><br>
+								<input type="text" id="country" name="country" value="Canada"><br><br>
 								<label for="postal">Postal/Zip Code:</label>
 								<input type="text" id="postal" name="postal" value="A1B 2C3"><br><br>
 								
