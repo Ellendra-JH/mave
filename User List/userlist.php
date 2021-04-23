@@ -12,13 +12,14 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="userlist.css" /> 
 	<script src="https://kit.fontawesome.com/445988e632.js" crossorigin="anonymous"></script>   
 	<title>User List Mave Groceries</title>
+	
  </head>
 
 <header class="header">
    <a href="../index.php" class="logo"><img src="logo.png" alt="logo" width="65px" ></a>
-   <a href="ProductListAndEdit/EditProductList.php" class="logo"><img src="img/backend.png" alt="logo" width="65px" id = "backend" ></a>
+   <a href="../ProductListAndEdit/EditProductList.php" class="logo"><img src="../img/backend.png" alt="logo" width="65px" id = "backend" ></a>
    <a href="../Shopping-Cart/shoppingcart.php"> <button class="cart"> <img src="shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
-   <a href="../signup-and-login/Login.php"> <button class="btn"> Login  </button> </a> 
+   <a href="../signup-and-login/Login.php"> <button class="btn" id = "log"> Login  </button> </a> 
 </header>
 <?php
 		if (!$_SESSION['user']=="admin"){
@@ -56,64 +57,57 @@ session_start();
 	</div>
 	 <h1>List of Users</h1>
 	 
-	 
-	 <table class="center">
+	<table class="center">
 	    <tr>
-		   <th>Username</th>
-		   <th>First Name</th>
-		   <th>Last Name</th>
-		   <th>Email</th> 
-		   <th><button class="btnA">Add New</button></th>
+		<th>Username</th>
+		   <th>Password</th>
+		   <th>Email</th>
+		   <th>Address</th> 
+		   <th>ID</th> 
+		   <th><a href = "EditUserList.php" ><button class="btnA">Add New</button> </a></th>
 	    </tr>
-		
-		<tr>
-		   <td>elon21</td>
-		   <td>Elon</td>
-		   <td>Musk</td>
-		   <td>emusk01@hotmail.com</td>
-		   <td> <a href = "EditUserList.php"> <button class="btnED" >Edit</button> </a>
-		       <button class="btnED">Delete</button>
-		   </td>
-		</tr>
-		
-		<tr>
-		   <td>billg55</td>
-		   <td>Bill</td>
-		   <td>Gates</td>
-		   <td>billgates12@gmail.com</td>
-		   <td> <a href = "EditUserList.php"> <button class="btnED" >Edit</button> </a>
-		       <button class="btnED">Delete</button>
-		   </td>
-		</tr>
-		<tr>
-		   <td>jbezos01</td>
-		   <td>Jeff</td>
-		   <td>Bezos</td>
-		   <td>jeffbezos99@hotmail.com</td>
-		   <td> <a href = "EditUserList.php"> <button class="btnED" >Edit</button> </a>
-		       <button class="btnED">Delete</button>
-		   </td>
-		</tr>
-		<tr>
-		   <td>markzuckfb</td>
-		   <td>Mark</td>
-		   <td>Zuckerberg</td>
-		   <td>fbcreator@hotmail.com</td>
-		   <td> <a href = "EditUserList.php"> <button class="btnED" >Edit</button> </a>
-		       <button class="btnED">Delete</button>
-		   </td>
-		</tr>
-		<tr>
-		   <td>steve51</td>
-		   <td>Steve</td>
-		   <td>Jobs</td>
-		   <td>applejobs@gmail.com</td>
-		   <td> <a href = "EditUserList.php"> <button class="btnED" >Edit</button> </a>
-		       <button class="btnED">Delete</button>
-		   </td>
-		</tr>
 
-	 </table> 
+<?php 
+	 
+
+	$servername = "sql308.epizy.com";
+$username = "epiz_28361315";
+$email = "";
+$password = "j7UShEwhNjIPSXA";
+$db = "epiz_28361315_data";
+	
+	 $con = mysqli_connect($servername, $username, $password,$db);
+	 $sql="SELECT * from login"; 
+	 $result=$con->query($sql);  
+
+
+	 while ($row=$result->fetch_assoc()):$ref = "EditUserList.php?a=" . $row['User']; ?> 
+	 <tr>
+	    <td><?php echo $row['User'];?></td> 
+		<td><?php echo $row['Password'];?></td> 
+		<td><?php echo $row['email'];?></td> 
+	    <td><?php echo $row['Address'];?></td> 
+		<td><?php echo $row['ID'];?></td> 
+		<td>
+		   <a href = " <?php echo "EditUserList.php?a=". $row['User'];?>"> <button class="btnED">Edit</button></a>
+		   <input type="button" button class="btnED" onClick="deleteme(<?php echo $row['ID'];?>)" name="Delete" value="Delete">
+		</td>
+	 </tr>
+	 
+	 <script language="javascript"> 
+	         function deleteme(delid){ 
+			    if(confirm("Do you want to delete?")){
+					window.location.href='delete.php?del_id=' + delid+'';
+					return true; 
+				}		 
+			 } 
+	 </script>	 
+	 
+<?php endwhile; ?> 
+
+</table>
+</div>
+
 	 
   <footer>
    
