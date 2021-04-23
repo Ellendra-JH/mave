@@ -108,13 +108,12 @@ $db = "epiz_28361315_data";
 </table>
 </div>
 
-	 
-  <footer>
+ <footer>
    
 
    <div class="text-ma">
       <h4>MAVE: SOEN-287 project </h4>
-          <a href="#team"> check out our team members</a>
+          <a href="#team"> Check out our team members!</a>
    </div>
    
    <br><br><br>
