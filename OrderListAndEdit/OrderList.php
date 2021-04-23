@@ -3,25 +3,24 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+ <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="BackEndStyle.css">
+		<link rel="stylesheet" href="../BackEndStyle.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<script src="https://kit.fontawesome.com/445988e632.js" crossorigin="anonymous"></script> 
+		<script src = "OrderList.js"> </script>
 		<title>Order List</title>
 		<meta name="description" content="This is the order list page">
 	</head>
 
 	<header class="header">
-		<a href="../index.php" class="logo"> <img src="../img/logo.png" alt="logo" width="65px" > </a>
+		<a href="../index.php" class="logo"><img src="../img/logo.png" alt="logo" width="65px" ></a>
 		<a href="ProductListAndEdit/EditProductList.php" class="logo"><img src="../img/backend.png" alt="logo" width="65px" id = "backend" ></a>
-		<a href="../Shopping-Cart/shoppingcart.php"> 
-			<button class="cart"> <img src="../img/shopping-cart.png" alt="shopping-cart" width="50%"> </button> 
-		</a>
-	   <a href="../signup-and-login/Login.php"> <button class="btn" id = "log"> Login </button> </a> 
+		<a href="../Shopping-Cart/shoppingcart.php"> <button class="cart"> <img src="../img/shopping-cart.png" alt="shopping-cart" width="50%">  </button> </a>
+		<a href="../signup-and-login/Login.php"> <button class="btn" id = "log"> Login  </button> </a> 
 	</header>
 	<?php
 		if (!$_SESSION['user']=="admin"){
@@ -45,7 +44,7 @@ session_start();
 		}
 		?>	
 	<nav class="navbar-2">
-		<a href="../index.php"  style="color:#460707b4;"><h3><u>Home</u> &nbsp;&nbsp;  / </a> &nbsp;&nbsp; <a href="OrderList.php" style = "color:black;"> Order List</h3></a>
+		<a href="../index.php"><h3>Order List</h3></a>
 	</nav>
 		
 	<body>
@@ -59,71 +58,151 @@ session_start();
 		<div class="container">
 			<!-- order list container-->					
 			<div> 
-				<table id = "myTable" class = "orders">
-					<tr>
+				<table class = "orders" id = "tabl">
+					<tr >
 						<th colspan = 3>Orders</th>
 					</tr>
 					<tr>
 						<th>Order Number</th>
 						<th>Contact Information</th>
-						<th>Devilery Address</th>
+						<th>Delivery Address</th>
 					</tr>
-					<tr id = "rowToClone">
-						<td></td>
-						<td></td>
-						<td> 
-							<a href="EditOrderList.php" class="button">Edit</a>
-							<a onclick="myFun(this)" class="button">Delete</a>
-							<a onclick="addRow()" class="button">Add</a>
+					<tr  id = "samplerow">
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
 						</td>
-					</tr>
-					<tr id = "rowToClone">
-						<td></td>
-						<td></td>
-						<td> 
-							<a href="EditOrderList.php" class="button">Edit</a>
-							<a onclick="myFun(this)" class="button">Delete</a>
-							<a onclick="addRow()" class="button">Add</a>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
 						</td>
-					</tr>
-					<tr id = "rowToClone">
-						<td></td>
-						<td></td>
 						<td> 
-							<a href="EditOrderList.php" class="button">Edit</a>
-							<a onclick="myFun(this)" class="button">Delete</a>
-							<a onclick="addRow()" class="button">Add</a>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
 						</td>
+						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php"  class="button">Edit</a> 
+							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a></td>
 					</tr>
-					
+					<tr>
+												<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
+						</td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
+						</td>
+						<td> 
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
+						<td></td>
+						<td style = "background-color:white; max-width:1px;"><a input type = "button" href="EditOrderList.php"  class="button">Edit</a> 
+							<a onclick="toDelete(this);" href="#delete" class="button";>Delete</a></td>
+					</tr>
+         
+					<tr>
+												<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
+						</td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
+						</td>
+						<td> 
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
+						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php"  class="button">Edit</a>
+							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a></td>
+					</tr>
+				
+					<tr>
+												<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[0];
+							?>
+						</td>
+						<td>
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[3]; 
+							?>
+						</td>
+						<td> 
+							<?php
+								$myFile = "Orders.txt";
+								$lines = file($myFile);
+								echo $lines[1]; 
+								echo $lines[2]; 
+								echo $lines[4]; 
+								echo $lines[5]; 
+								echo $lines[6]; 
+								echo $lines[7]; 
+							?>
+						<td style = "background-color:white; max-width:1px;"><a href="EditOrderList.php" class="button">Edit</a> 
+							<a onclick="toDelete(this);"  href="#delete" class="button";>Delete</a>
+				
 				</table>
+
 			</div>
+
 		</div>		
+
+ <a onclick = "toAdd()" href="#addProductPage" class="button" style = "left:1050px; bottom: 150px;">Add</a>
 	</body>
-	
-	<script>
-		function addNew() 
-		{
-			var row = document.getElementById("rowToClone"); // find row to copy
-			var table = document.getElementById("myTable"); // find table to append to
-			var clone = row.cloneNode(true); // copy children too
-			clone.id = "newID"; // change id or other attributes/contents
-			table.appendChild(clone); // add new row to end of table
-		}
-	
-		function remove(r) 
-		{
-			var i = r.parentNode.parentNode.rowIndex;
-			document.getElementById("myTable").deleteRow(i);
-		}
-</script>
 
 	<footer>
 	   <div class="text-ma">
 		  <h4>MAVE: SOEN-287 project </h4>
-			  <a href="#team"> chech out our team members</a>
+			  <a href="#team"> check out our team members</a>
+
 	   </div>
-	   
+	  
 	   <br><br><br>
 
 	   <div class="social-menu">
