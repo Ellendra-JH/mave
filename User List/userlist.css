@@ -186,11 +186,13 @@ td img{
 
 
  /*Footer Style*/
+ 
+
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: fixed;
+	bottom:0;
+	width:100%;
     clear: both;
     background-color: #460707b4;
     color: #ffffff;
@@ -201,7 +203,8 @@ footer {
     text-align: left;
     
   }
- .copyright {
+  
+  .copyright {
     text-align:center;
     padding-top:24px;
     opacity:0.3;
